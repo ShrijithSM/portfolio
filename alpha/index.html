@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrijith S Menon's Portfolio</title>
+    <style>
+        body {
+            background-color:rgb(34, 40, 49);
+            font-family: 'Montserrat', sans-serif;
+            color: rgb(238, 238, 238);
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .social {
+            color: rgb(49, 54, 63)  ;
+        }
+
+        .link {
+            color: rgb(0, 173, 181);
+        }
+
+        .nav {
+            margin: 0;
+            width: 100%;
+            background-color:rgb(57, 62, 70);
+            overflow: hidden;
+        }
+
+        .nav a {
+            float: left;
+            color: rgb(238, 238, 238);
+            padding: 0px 10px;
+            text-align: center;
+            font-size: 18px;
+            
+            text-decoration: none;
+        }
+        .nav a:hover {
+            color: grey;
+        }
+
+        .button {
+            padding: 0px 10px;
+            font-size: 18px;
+            text-align: center;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="form.html">Form</a>
+        <a href="table.html">Table</a>
+        <a href="walter.html">Walter?</a>
+    </nav>
+
+
+
+
+    <h1 class="link">👋 Hey there! I'm Shrijith S Menon</h1>
+    <p>Welcome to my profile! I’m an AIML student, deeply interested in artificial intelligence, machine learning, and
+        open-source contributions.</p>
+
+    <h2 class="link">🌱 About Me</h2>
+    <ul>
+        <li>🏫 <strong>AIML Student</strong> Currently in my 2nd year</li>
+        <li>💻 <strong>Learning Path</strong>: Focused on building AI/ML skills and practical projects</li>
+        <li>🌍 Based in <strong>Bengaluru, India</strong></li>
+    </ul>
+
+    <h2 class="link">🛠️ Skills & Technologies</h2>
+    <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+        <img src="https://img.shields.io/badge/Numpy-013243?style=flat&logo=numpy&logoColor=white" alt="Numpy">
+        <img src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white" alt="Pandas">
+        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux">
+    </p>
+
+    <h2 class="link">📌 Featured Projects</h2>
+    <ul>
+        <li>
+            <strong><a class="link" href="https://github.com/ShrijithSM/Image-Captioning-AI">Image Captioning
+                    AI</a></strong><br>
+            An image captioning app using BLIP and Gradio to generate AI-based captions for uploaded images.
+        </li>
+        <li>
+            <strong><a class="link" href="https://github.com/ShrijithSM/IBM-AI-Developer-Notes">IBM AI Developer
+                    Notes</a></strong><br>
+            Notes and Projects made while pursuing the IBM AI Developer Course.
+        </li>
+    </ul>
+
+    <button class="button"><a class="social" href="https://linkedin.com/in/shrijithsm/">Linkedin</a></button>
+    <button class="button"><a class="social" href="http://github.com/shrijithsm">GitHub</a></button>
+    <button class="button"><a class="social" href="http://leetcode.com/u/shrijithsm">LeetCode</a></button>
+
+
+
+
+    <h2 class="link">Contact Me</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <input type="text" id="message" name="message" required><br><br>
+
+
+        <input type="submit" value="Send"><br>
+    </form><br>
+
+
+    <button onclick="window.location.href='form.html'">Go to Form</button>
+    <button onclick="window.location.href='table.html'">Go to Table</button>
+    <button onclick="window.location.href='walter.html'">Walter?</button>
+</body>
+
+</html>
