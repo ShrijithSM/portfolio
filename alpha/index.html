@@ -1,134 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrijith S Menon's Portfolio</title>
-    <style>
-        body {
-            background-color:rgb(34, 40, 49);
-            font-family: 'Montserrat', sans-serif;
-            color: rgb(238, 238, 238);
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        .social {
-            color: rgb(49, 54, 63)  ;
-        }
-
-        .link {
-            color: rgb(0, 173, 181);
-        }
-
-        .nav {
-            margin: 0;
-            width: 100%;
-            background-color:rgb(57, 62, 70);
-            overflow: hidden;
-        }
-
-        .nav a {
-            float: left;
-            color: rgb(238, 238, 238);
-            padding: 0px 10px;
-            text-align: center;
-            font-size: 18px;
-            
-            text-decoration: none;
-        }
-        .nav a:hover {
-            color: grey;
-        }
-
-        .button {
-            padding: 0px 10px;
-            font-size: 18px;
-            text-align: center;
-            
-
-        }
-    </style>
+    <title>Shrijith S Menon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="form.html">Form</a>
-        <a href="table.html">Table</a>
-        <a href="walter.html">Walter?</a>
-    </nav>
+    <header class="navbar">
+        <nav>
+            <a href="#home" class="active">#home</a>
+            <a href="projects.html">#projects</a>
+            <a href="#about-me">#about-me</a>
+        </nav>
+    </header>
 
+    <h1>Hi <br> I'm <span class="highlight">Shrijith S Menon</span></h1>
+    <p>Welcome to my Portfolio! I’m an AIML student, deeply interested in AI and open-source contributions.</p>
+    
+    <h2>🌱 About Me</h2>
+    <p>🏫 <span class="highlight">AIML Student</span> - Currently in my 2nd year</p>
+    <p>💻 <span class="highlight">Learning Path</span>: Focused on building AI/ML skills</p>
+    <p>🌍 Based in <span class="highlight">Bengaluru, India</span></p>
+    <p>🚀 <span class="highlight">Current Project</span>: <a href="https://github.com/coeusyk/election-prediction" class="code">Election Result Analysis and Prediction</a></p>
+    
+    <h2>🌐 Socials</h2>
+    <div class="socials">
+        <!-- <p> -->
+            <a href="https://instagram.com/shrijithsm">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:20px; height:20px; vertical-align:middle">
+                Instagram
+            </a> |</a>
+            <a href="https://linkedin.com/in/shrijithsm">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="width:20px; height:20px; vertical-align:middle;">
+                LinkedIn
+            </a> |</a>
+            <a href="mailto:shrijithsmenon@gmail.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" style="width:20px; height:20px; vertical-align:middle;">
+                Email
+            </a></a>
 
+    </div>
+    
+    <h2>🛠️ Skills & Technologies</h2>
+    <div class="badges">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+        <img src="https://img.shields.io/badge/Numpy-013243?style=flat&logo=numpy&logoColor=white">
+        <img src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white">
+        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
+    </div>
+    
+    <h2>📌 Featured Projects</h2>
+    <p>🔹 <a href="https://github.com/ShrijithSM/Image-Captioning-AI">Image Captioning AI</a> - AI-generated captions for images.</p>
+    <p>🔹 <a href="https://github.com/ShrijithSM/IBM-AI-Developer-Notes">IBM AI Developer Notes</a> - Course notes and projects.</p>
 
+    <div class="github-stats">
+        <h2>📊 GitHub Stats</h2>
+        <p>
+            <img src="https://github-readme-stats.vercel.app/api?username=shrijithsm&theme=blue_navy&hide_border=false&include_all_commits=false&count_private=false"><br>
+            <img src="https://nirzak-streak-stats.vercel.app/?user=shrijithsm&theme=blue_navy&hide_border=false"><br>
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shrijithsm&theme=blue_navy&hide_border=false&include_all_commits=false&count_private=false&layout=compact">
+        </p>
+    </div>
 
-    <h1 class="link">👋 Hey there! I'm Shrijith S Menon</h1>
-    <p>Welcome to my profile! I’m an AIML student, deeply interested in artificial intelligence, machine learning, and
-        open-source contributions.</p>
-
-    <h2 class="link">🌱 About Me</h2>
-    <ul>
-        <li>🏫 <strong>AIML Student</strong> Currently in my 2nd year</li>
-        <li>💻 <strong>Learning Path</strong>: Focused on building AI/ML skills and practical projects</li>
-        <li>🌍 Based in <strong>Bengaluru, India</strong></li>
-    </ul>
-
-    <h2 class="link">🛠️ Skills & Technologies</h2>
-    <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
-        <img src="https://img.shields.io/badge/Numpy-013243?style=flat&logo=numpy&logoColor=white" alt="Numpy">
-        <img src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white" alt="Pandas">
-        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux">
-    </p>
-
-    <h2 class="link">📌 Featured Projects</h2>
-    <ul>
-        <li>
-            <strong><a class="link" href="https://github.com/ShrijithSM/Image-Captioning-AI">Image Captioning
-                    AI</a></strong><br>
-            An image captioning app using BLIP and Gradio to generate AI-based captions for uploaded images.
-        </li>
-        <li>
-            <strong><a class="link" href="https://github.com/ShrijithSM/IBM-AI-Developer-Notes">IBM AI Developer
-                    Notes</a></strong><br>
-            Notes and Projects made while pursuing the IBM AI Developer Course.
-        </li>
-    </ul>
-
-    <button class="button"><a class="social" href="https://linkedin.com/in/shrijithsm/">Linkedin</a></button>
-    <button class="button"><a class="social" href="http://github.com/shrijithsm">GitHub</a></button>
-    <button class="button"><a class="social" href="http://leetcode.com/u/shrijithsm">LeetCode</a></button>
-
-
-
-
-    <h2 class="link">Contact Me</h2>
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message:</label><br>
-        <input type="text" id="message" name="message" required><br><br>
-
-
-        <input type="submit" value="Send"><br>
-    </form><br>
-
-
-    <button onclick="window.location.href='form.html'">Go to Form</button>
-    <button onclick="window.location.href='table.html'">Go to Table</button>
-    <button onclick="window.location.href='walter.html'">Walter?</button>
+    <h2>📫 Connect with Me</h2>
+    <div class="links">
+        <a href="https://in.linkedin.com/in/shrijithsm">LinkedIn</a>
+        <a href="https://instagram.com/shrijithsm">Instagram</a>
+        <a href="mailto:shrijithsmenon@gmail.com">Email</a>
+    </div>
 </body>
-
 </html>
