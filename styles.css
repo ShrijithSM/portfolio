@@ -1,64 +1,133 @@
+/* General Styles */
 body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    background-color: #242424;
-    color: white;
-    font-family: 'Space Grotesk', sans-serif;
-    text-align: left;
-    padding: 50px;
+    text-align: center;
 }
 
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: transparent;
+/* Header */
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    border-bottom: 2px solid #333;
 }
 
-nav a {
-    text-decoration: none;
-    color: #aaa;
-    margin-left: 20px;
-    font-size: 1rem;
-    /* font-family: 'IBM Plex Mono', monospace; */
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover,
-nav a.active {
-    color: white;
-    font-weight: bold;
-}
-
-/* Typography */
 h1 {
     font-size: 2.5rem;
-    font-weight: 600;
+    margin: 0;
+    color: #fff;
+}
+
+p {
+    color: #aaa;
+}
+
+/* Navigation */
+nav {
+    background: #121212;
+    padding: 10px;
+    border-bottom: 2px solid #222;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
 }
 
 h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2rem;
+    color: #fff;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-.highlight {
+/* Tech Stack */
+.skills-container span {
+    background: #222;
+    padding: 8px 12px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* Projects */
+.project {
+    background: #181818;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+.project a {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.code {
-    font-family: 'IBM Plex Mono', monospace;
+.project a:hover {
+    text-decoration: underline;
+    color: #fff;
 }
 
-.links a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
+/* Contact */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #bbb;
     font-size: 1.2rem;
-    border-bottom: 2px solid white;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.badges img {
-    margin: 10px;
+ul li a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #121212;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-top: 2px solid #222;
 }
