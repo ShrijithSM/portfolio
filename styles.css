@@ -67,7 +67,7 @@ nav ul li a {
 /* Sections */
 section {
     max-width: 800px;
-    margin: 100px auto 50px;
+    margin: 10px auto 50px;
     padding: 20px;
     background: #161616;
     border-radius: 10px;
@@ -142,6 +142,9 @@ footer {
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
+    section {
+        max-width: 500px;
+    }
     nav {
         padding: 10px 15px;
     }
