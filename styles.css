@@ -28,8 +28,8 @@ p {
 /* Navigation */
 nav {
     background: #121212;
-    padding: 10px;
-    border-bottom: 2px solid #222;
+    padding: 0px;
+    /* border-bottom: 2px solid #222; */
 }
 
 nav ul {
@@ -37,7 +37,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li {
