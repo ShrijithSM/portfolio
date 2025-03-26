@@ -5,14 +5,33 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #fff;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #fff;
 }
 
 /* Navigation Bar */
-nav {
+/* nav {
     background: #121212;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
     border-bottom: 2px solid #222;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -21,7 +40,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li {
@@ -29,121 +48,127 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #bbb;
-    text-decoration: none;
     font-size: 1rem;
-    padding: 8px 15px;
-    transition: color 0.3s ease-in-out;
-}
+    padding: 8px 12px;
+} */
 
-nav ul li a:hover {
-    color: #fff;
-}
-
-/* Heading */
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 20px;
-}
-
-p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #b3b3b3;
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #bbb;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 /* Sections */
 section {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 100px auto 50px;
     padding: 20px;
-    background: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: #161616;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-h2 {
-    font-size: 2rem;
-    color: #fff;
-    text-align: center;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+/* About */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Skills */
+.hero-buttons span {
+    background: #222;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Skills Container */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .skills-container span {
     background: #222;
-    color: #ddd;
     padding: 8px 12px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 14px;
 }
 
-/* Projects & Certifications */
+/* Projects & Certificates */
 .project {
-    background: #222;
+    background: #1a1a1a;
     padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
 }
 
-.project h3 a {
-    color: #bbb;
-    text-decoration: none;
+.project a {
     font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.project h3 a:hover {
-    color: #ffffff;
-}
-
-.project p {
-    font-size: 1rem;
-    color: #aaa;
+    font-weight: bold;
 }
 
 /* Contact Section */
 #contact ul {
-    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     padding: 0;
-    text-align: center;
 }
 
 #contact ul li {
+    list-style: none;
     display: inline;
-    margin: 0 15px;
 }
 
-#contact ul li a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease-in-out;
-}
-
-#contact ul li a:hover {
-    color: #ffffff;
-}
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px 0;
+    margin-top: 50px;
+    padding: 20px;
     background: #121212;
     color: #777;
-    font-size: 0.9rem;
-    border-top: 2px solid #222;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: #121212;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #222;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px 15px;
+    }
 }

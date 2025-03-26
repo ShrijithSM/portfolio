@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll("nav ul li a");
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.createElement("button");
+    menuToggle.classList.add("menu-toggle");
+    menuToggle.innerHTML = "☰"; // Hamburger icon
+    document.querySelector("nav").appendChild(menuToggle);
 
-    links.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        });
+    const navUl = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", function() {
+        navUl.classList.toggle("active");
     });
 });
