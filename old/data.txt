@@ -1,0 +1,55 @@
+Shrijith S Menon - Portfolio
+
+Hero Section:
+Shrijith S Menon
+AIML Student | AI Enthusiast | Competitive Programmer
+LinkedIn: https://linkedin.com/in/shrijithsm
+GitHub: https://github.com/shrijithsm
+LeetCode: https://leetcode.com/u/shrijithsm
+
+About Me:
+Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I have a strong foundation in Python and a keen interest in building AI-powered applications.
+Currently, I'm focused on solving real-world problems with AI, strengthening my DSA skills, and working on practical projects. I enjoy participating in hackathons, exploring new technologies, and constantly improving my coding skills.
+
+Tech Stack:
+Python, Java, HTML5, Heroku, Google Cloud, Flask, Jenkins, MongoDB, MySQL, SQLite, Figma, Canva, Adobe, Matplotlib, NumPy, Pandas, Plotly, scikit-learn, Scipy, Git, GitHub
+
+Featured Projects:
+1. Speech Emotion Recognition
+   Recognizing emotions from speech using machine learning techniques.
+   GitHub: https://github.com/ShrijithSM/Speech-Emotion-Recognition
+
+2. Election Data Visualization
+   Visualize past election results and predict outcomes using ML.
+   GitHub: https://github.com/coeusyk/election-prediction
+
+3. House Price Prediction Model
+   This project predicts the house prices based on various features using a ML model.
+   GitHub: https://github.com/ShrijithSM/House-Price-Predictions
+
+Certificates:
+1. IBM AI Developer Professional Certificate
+   A comprehensive program by IBM that covers AI, machine learning, and deployment. It equips learners with practical skills to design, build, and deploy AI-powered solutions, making it ideal for aspiring AI developers.
+   Certificate: https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3
+
+2. Python for Data Science, AI & Development
+   An introductory course by IBM that covers Python programming, data analysis, visualization, and essential libraries like Pandas, NumPy, and Matplotlib. It provides hands-on experience in applying Python for AI and data science, making it ideal for beginners aiming to build a strong foundation in these fields.
+   Certificate: https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3
+
+3. Generative AI-Powered Applications with Python
+   This certificate focuses on building AI-powered applications using Python, covering generative AI concepts, tools, and practical implementations to create innovative solutions.
+   Certificate: https://coursera.org/share/3df108ee1d8808b10581315924e67384
+
+Achievements:
+1. Manipal Institute of Technology CTF
+   Participated in a 48hrs CTF competition and ranked 10th out of 30 teams.
+   Website: https://www.shrijithsm.tech
+
+Contact:
+Let's connect and collaborate!
+Email: shrijithsmenon@gmail.com
+LinkedIn: https://linkedin.com/in/shrijithsm
+GitHub: https://github.com/shrijithsm
+Phone: +91 8891874928
+
+© 2025 Shrijith S Menon
