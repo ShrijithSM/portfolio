@@ -374,6 +374,22 @@ body {
     color: var(--primary-color);
 }
 
+/* X (Twitter) icon specific styles */
+.fa-x-twitter {
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.social-links a:hover .fa-x-twitter,
+.contact-item:hover .fa-x-twitter {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
 /* Footer */
 footer {
     text-align: center;
