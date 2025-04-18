@@ -1,14 +1,46 @@
-# Shrijith S Menon - Portfolio
+# 🚀 Shrijith S Menon - Portfolio Website
 
-## Description
-This is a personal portfolio website showcasing my skills, projects, certifications, and achievements. It is designed with a modern, minimalistic dark theme and is fully responsive for both desktop and mobile devices. The portfolio highlights my expertise in Artificial Intelligence, Machine Learning, and Competitive Programming.
+A modern, responsive portfolio website showcasing my journey in AI/ML, projects, and achievements. Built with a clean, minimalistic design featuring both dark and light themes.
 
-## Installation
-To set up and run this portfolio locally, follow these steps:
+## 🌟 Live Demo
+[Visit Portfolio Website](https://www.shrijithsm.tech)
+
+## ✨ Features
+
+### 💻 User Interface
+- **Responsive Design**: Seamlessly adapts to all device sizes
+- **Theme Toggle**: Switch between dark and light modes
+- **Smooth Scrolling**: Enhanced navigation experience
+- **Modern UI**: Clean and professional design with Inter and Poppins fonts
+
+### 📱 Key Sections
+- **Hero Section**: Professional introduction with social media links
+- **About Me**: Background in AI/ML and Computer Science
+- **Tech Stack**: Comprehensive display of technical skills
+- **Projects**: Showcase of AI/ML and development work
+- **Certificates**: Professional certifications from IBM and other platforms
+- **Achievements**: Notable accomplishments and recognition
+- **Contact**: Multiple channels for professional connection
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5
+- CSS3 (Custom styling with modern features)
+- JavaScript (Vanilla JS for interactivity)
+- Font Awesome Icons
+- Google Fonts (Inter & Poppins)
+
+### Development Tools
+- VS Code
+- Git & GitHub
+- Web Development Tools
+
+## 🔧 Installation & Usage
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/shrijithsm/portfolio.git
+   git clone https://github.com/ShrijithSM/portfolio.git
    ```
 
 2. Navigate to the project directory:
@@ -16,15 +48,39 @@ To set up and run this portfolio locally, follow these steps:
    cd portfolio
    ```
 
+3. Open `index.html` in your browser or use a local server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   # Or using Node.js
+   npx http-server
+   ```
 
+## 📂 Project Structure
+```
+portfolio/
+├── index.html          # Main HTML file
+├── styles.css          # Styling
+├── script.js           # JavaScript functionality
+└── README.md          # Documentation
+```
 
-## Features
-- **Modern Design**: Minimalistic dark theme with responsive design.
-- **Hero Section**: Highlights my name, title, and links to social profiles.
-- **About Me**: A brief introduction to my background and interests.
-- **Tech Stack**: A grid showcasing the technologies I work with.
-- **Projects**: Featured projects with links to their GitHub repositories.
-- **Certifications**: A section displaying my professional certifications.
-- **Achievements**: Highlights of my accomplishments.
-- **Contact Section**: Easy ways to connect with me via email, LinkedIn, and GitHub.
+## 🤝 Connect With Me
 
+- **Email**: shrijithsmenon@gmail.com
+- **LinkedIn**: [shrijithsm](https://linkedin.com/in/shrijithsm)
+- **GitHub**: [ShrijithSM](https://github.com/shrijithsm)
+- **Twitter**: [@shrijithsm](https://x.com/shrijithsm)
+- **LeetCode**: [shrijithsm](https://leetcode.com/u/shrijithsm)
+
+## 📌 Future Improvements
+
+- [ ] Add portfolio screenshots in README
+- [ ] Implement project filtering
+- [ ] Add blog section
+- [ ] Enhance accessibility features
+- [ ] Add animation effects
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
