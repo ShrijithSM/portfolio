@@ -1,18 +1,5 @@
 :root {
-    /* Light mode colors */
-    --primary-color: #2563eb;
-    --text-primary: #1f2937;
-    --text-secondary: #4b5563;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f3f4f6;
-    --spacing-unit: 1rem;
-    --navbar-bg: rgba(255, 255, 255, 0.95);
-    --card-border: transparent;
-    --card-shadow: rgba(0, 0, 0, 0.1);
-}
-
-/* Dark mode colors */
-[data-theme="dark"] {
+    /* Dark mode colors */
     --primary-color: #60a5fa;
     --text-primary: #f3f4f6;
     --text-secondary: #d1d5db;
@@ -21,11 +8,6 @@
     --navbar-bg: rgba(0, 0, 0, 0.95);
     --card-border: #2563eb;
     --card-shadow: rgba(96, 165, 250, 0.1);
-}
-
-/* Theme transition */
-* {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 * {
@@ -42,6 +24,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
+    background-color: var(--bg-primary);
 }
 
 .container {
@@ -51,25 +34,10 @@ body {
 }
 
 /* Navbar */
-/* Theme Toggle */
 .nav-right {
     display: flex;
     align-items: center;
     gap: 2rem;
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-primary);
-    cursor: pointer;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.theme-toggle:hover {
-    color: var(--primary-color);
 }
 
 .navbar {
@@ -219,7 +187,6 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--card-shadow);
-    transition: all 0.3s ease;
     border: 1px solid var(--card-border);
 }
 
