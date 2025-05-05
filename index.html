@@ -4,183 +4,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrijith S Menon - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">SSM</div>
-            <div class="nav-right">
-                <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button> -->
-                <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <div class="nav-logo">SSM</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Shrijith S Menon</h1>
-            <p class="subtitle">AIML Student | AI Enthusiast | Competitive Programmer</p>
+            <h1 class="animate-text">Shrijith S Menon</h1>
+            <p class="typewriter">AIML Student | AI Enthusiast | Idk</p>
             <div class="social-links">
                 <a href="https://linkedin.com/in/shrijithsm" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/shrijithsm" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://leetcode.com/u/shrijithsm" target="_blank"><i class="fas fa-code"></i></a>
-                <a href="https://x.com/shrijithsm" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I have a strong foundation in Python and a keen interest in building AI-powered applications.</p>
-            <p>Currently, I'm focused on solving real-world problems with AI, strengthening my DSA skills, and working on practical projects. I enjoy participating in hackathons, exploring new technologies, and constantly improving my coding skills.</p>
-            
-            <h3>Tech Stack</h3>
-            <div class="tech-stack">
-
-                <div class="tech-category">
-                    <h4>Languages</h4>
-                    <span class="tech-item">Python</span>
-                    <span class="tech-item">Java</span>
-                    <span class="tech-item">HTML5</span>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I have a strong foundation in Python and a keen interest in building AI-powered applications.</p>
+                    <p>Currently, I'm focused on solving real-world problems with AI, strengthening my DSA skills, and working on practical projects. I enjoy participating in hackathons, exploring new technologies, and constantly improving my coding skills.</p>
                 </div>
-                
-                <div class="tech-category">
-                    <h4>AI/ML Libraries</h4>
-                    <span class="tech-item">NumPy</span>
-                    <span class="tech-item">Pandas</span>
-                    <span class="tech-item">scikit-learn</span>
-                    <span class="tech-item">TensorFlow</span>
-                    <span class="tech-item">Hugging Face</span>
+                <div class="tech-stack">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-grid">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>HTML5</span>
+                        <span>Heroku</span>
+                        <!-- <span>Google Cloud</span> -->
+                        <span>Flask</span>
+                        <span>Jenkins</span>
+                        <span>MongoDB</span>
+                        <span>MySQL</span>
+                        <span>SQLite</span>
+                        <span>Figma</span>
+                        <span>Canva</span>
+                        <span>Adobe</span>
+                        <span>Matplotlib</span>
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>Plotly</span>
+                        <span>scikit-learn</span>
+                        <span>Scipy</span>
+                        <span>Git</span>
+                    </div>
                 </div>
-                
-                <div class="tech-category">
-                    <h4>Databases</h4>
-                    <span class="tech-item">MongoDB</span>
-                    <span class="tech-item">MySQL</span>
-                    <span class="tech-item">SQLite</span>
-                </div>
-
-                <div class="tech-category">
-                    <h4>Tools & Platforms</h4>
-                    <span class="tech-item">Git</span>
-                    <span class="tech-item">GitHub</span>
-                    <span class="tech-item">Linux</span>
-                    <span class="tech-item">VS Code</span>
-                    <span class="tech-item">Jupyter</span>
-                    <span class="tech-item">Google Colab</span>
-                    <span class="tech-item">Windows</span>
-                </div>
-
-                
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="projects group-section">
         <div class="container">
             <h2>Featured Projects</h2>
-            <div class="project-grid">
+            <div class="project-grid card-grid">
                 <div class="project-card">
-                    <h3>Speech Emotion Recognition</h3>
-                    <p>Recognizing emotions from speech using machine learning techniques.</p>
-                    <a href="https://github.com/ShrijithSM/Speech-Emotion-Recognition" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View Project
-                    </a>
+                    <div class="project-content">
+                        <h3>Speech Emotion Recognition</h3>
+                        <p>Recognizing emotions from speech using machine learning techniques.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/ShrijithSM/Speech-Emotion-Recognition" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Election Data Visualization</h3>
-                    <p>Visualize past election results and predict outcomes using ML.</p>
-                    <a href="https://github.com/coeusyk/election-prediction" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View Project
-                    </a>
+                    <div class="project-content">
+                        <h3>Election Data Visualization</h3>
+                        <p>Visualize past election results and predict outcomes using ML.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/coeusyk/election-prediction" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>House Price Prediction Model</h3>
-                    <p>This project predicts the house prices based on various features using a ML model.</p>
-                    <a href="https://github.com/ShrijithSM/House-Price-Predictions" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View Project
-                    </a>
+                    <div class="project-content">
+                        <h3>House Price Prediction Model</h3>
+                        <p>This project predicts the house prices based on various features using a ML model.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/ShrijithSM/House-Price-Predictions" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="certificates" class="certificates">
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements group-section">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievement-grid card-grid">
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Speech Emotion Recognition</h3>
+                        <p>Recognizing emotions from speech using machine learning techniques.</p>
+                        <div class="achievement-links">
+                            <a href="https://github.com/ShrijithSM/Speech-Emotion-Recognition" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Election Data Visualization</h3>
+                        <p>Visualize past election results and predict outcomes using ML.</p>
+                        <div class="achievement-links">
+                            <a href="https://github.com/coeusyk/election-prediction" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>House Price Prediction Model</h3>
+                        <p>This project predicts the house prices based on various features using a ML model.</p>
+                        <div class="achievement-links">
+                            <a href="https://github.com/ShrijithSM/House-Price-Predictions" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates group-section">
         <div class="container">
             <h2>Certificates</h2>
-            <div class="cert-grid">
+            <div class="cert-grid card-grid">
                 <div class="cert-card">
                     <h3>IBM AI Developer Professional Certificate</h3>
                     <p>A comprehensive program by IBM that covers AI, machine learning, and deployment. It equips learners with practical skills to design, build, and deploy AI-powered solutions.</p>
-                    <a href="https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3" target="_blank" class="cert-link">View Certificate</a>
+                    <a href="https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3" target="_blank" class="cert-link">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
                 <div class="cert-card">
                     <h3>Python for Data Science, AI & Development</h3>
                     <p>An introductory course by IBM that covers Python programming, data analysis, visualization, and essential libraries like Pandas, NumPy, and Matplotlib.</p>
-                    <a href="https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3" target="_blank" class="cert-link">View Certificate</a>
+                    <a href="https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3" target="_blank" class="cert-link">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
                 <div class="cert-card">
                     <h3>Generative AI-Powered Applications with Python</h3>
                     <p>This certificate focuses on building AI-powered applications using Python, covering generative AI concepts, tools, and practical implementations.</p>
-                    <a href="https://coursera.org/share/3df108ee1d8808b10581315924e67384" target="_blank" class="cert-link">View Certificate</a>
+                    <a href="https://coursera.org/share/3df108ee1d8808b10581315924e67384" target="_blank" class="cert-link">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2>Achievements</h2>
-            <div class="achievement-card">
-                <h3>Manipal Institute of Technology CTF</h3>
-                <p>Participated in a 48hrs CTF competition and ranked 10th out of 30 teams.</p>
-                <a href="https://www.shrijithsm.tech" target="_blank" class="achievement-link">Visit Website</a>
-            </div>
-        </div>
-    </section>
-
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact</h2>
             <p class="contact-intro">Let's connect and collaborate!</p>
-            <div class="contact-grid">
-                <a href="mailto:shrijithsmenon@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>shrijithsmenon@gmail.com</span>
-                </a>
-                <a href="https://linkedin.com/in/shrijithsm" target="_blank" class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/shrijithsm" target="_blank" class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://x.com/shrijithsm" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <span>X (Twitter)</span>
-                </a>
-                
+            <div class="contact-grid card-grid">
+                <div class="contact-item">
+                    <a href="mailto:shrijithsmenon@gmail.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" class="contact-logo">
+                        <span>shrijithsmenon@gmail.com</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="contact-logo">
+                    <span>shrijithsm</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-logo">
+                    <span>shrijithsm</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="contact-logo">
+                    <span>shrijithsm</span>
+                </div>
+                <div class="contact-item">
+                    <a href="tel:+918891874928">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="contact-logo">
+                        <span>+91 8891874928</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Shrijith S Menon</p>
+        <p>&copy; 2025 Shrijith S Menon. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
