@@ -7,6 +7,7 @@ A modern, responsive portfolio website showcasing my journey in AI/ML, projects,
 
 ## ✨ Features
 
+
 ### 💻 User Interface
 - **Responsive Design**: Seamlessly adapts to all device sizes
 - **Theme Toggle**: Switch between dark and light modes
