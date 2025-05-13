@@ -352,7 +352,7 @@ body {
     align-items: center;
     gap: 15px;
     text-decoration: none;
-    color: var(--text-color);
+    /* color: var(--text-color); */
 }
 
 .contact-item:hover {
@@ -363,7 +363,7 @@ body {
 .contact-logo {
     width: 30px;
     height: 30px;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
     opacity: 0.8;
 }
 
