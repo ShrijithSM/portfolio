@@ -1,12 +1,12 @@
 # 🚀 Shrijith S Menon - Portfolio Website
 
+
 A modern, responsive portfolio website showcasing my journey in AI/ML, projects, and achievements. Built with a clean, minimalistic design featuring both dark and light themes.
 
 ## 🌟 Live Demo
 [Visit Portfolio Website](https://www.shrijithsm.tech)
 
 ## ✨ Features
-
 
 ### 💻 User Interface
 - **Responsive Design**: Seamlessly adapts to all device sizes
