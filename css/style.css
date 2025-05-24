@@ -387,28 +387,101 @@ body {
     border-color: var(--primary-color);
 }
 
-/* Responsive Design for About Section */
-@media (max-width: 1024px) {
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+/* Profiles Section */
+.profiles-section {
+    margin-top: 40px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: var(--card-shadow);
+}
+
+.profiles-section h3 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+}
+
+.profiles-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(30, 41, 59, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(60, 47, 242, 0.1);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.profile-item i {
+    font-size: 24px;
+}
+
+.profile-item.github i {
+    color: #333;
+}
+
+.profile-item.github:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.profile-item.leetcode i {
+    color: #FFA116;
+}
+
+.profile-item.leetcode:hover {
+    background-color: #FFA116;
+    border-color: #FFA116;
+}
+
+.profile-item.linkedin i {
+    color: #0A66C2;
+}
+
+.profile-item.linkedin:hover {
+    background-color: #0A66C2;
+    border-color: #0A66C2;
+}
+
+.profile-item span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.profile-item:hover {
+    transform: translateY(-5px);
+}
+
+.profile-item:hover i,
+.profile-item:hover span {
+    color: #fff;
 }
 
 @media (max-width: 768px) {
-    .profile-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px;
-    }
-
-    .profile-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    .tech-grid {
-        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    .profiles-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -551,7 +624,6 @@ body {
     align-items: center;
     gap: 15px;
     text-decoration: none;
-    /* color: var(--text-color); */
 }
 
 .contact-item:hover {
@@ -562,7 +634,6 @@ body {
 .contact-logo {
     width: 30px;
     height: 30px;
-    /* filter: brightness(0) invert(1); */
     opacity: 0.8;
 }
 
