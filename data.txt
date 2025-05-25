@@ -44,7 +44,7 @@ Certificates:
 Achievements:
 1. Manipal Institute of Technology CTF
    Participated in a 48hrs CTF competition and ranked 10th out of 30 teams.
-   Website: https://www.shrijithsm.tech
+   
 
 Contact:
 Let's connect and collaborate!
