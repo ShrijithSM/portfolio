@@ -5,13 +5,13 @@
     --bg-secondary: #161b22;
     --text-primary: #f0f6fc;
     --text-secondary: #8b949e;
-    --accent-primary: #58a6ff;
-    --accent-secondary: #1f6feb;
+    --accent-primary: #000000;
+    --accent-secondary: #000000;
     --glass-bg: rgba(22, 27, 34, 0.7);
-    --glass-border: rgba(240, 246, 252, 0.1);
+    --glass-border: rgb(0, 0, 0);
     --card-shadow: rgba(0, 0, 0, 0.2);
-    --gradient-1: linear-gradient(45deg, #58a6ff, #1f6feb);
-    --gradient-2: linear-gradient(135deg, #58a6ff33, #1f6feb33);
+    --gradient-1: linear-gradient(45deg, #000000, #000000);
+    --gradient-2: linear-gradient(135deg, #00000033, #00000033);
 }
 
 * {
