@@ -364,7 +364,7 @@
                 I'm always open to new opportunities and collaborations. Feel free to connect with me!
             </p>
             <div class="flex flex-wrap justify-center gap-6 reveal-container">
-                <a href="mailto:shrijithsmenon@gmail.com" class="bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
+                <a href="mailto:shrijithsmenon@gmail.com" class="bg-slate-800 hover:bg-slate-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
                     Email Me
                 </a>
                 <a href="https://linkedin.com/in/shrijithsm" target="_blank" class="bg-slate-800 hover:bg-slate-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
@@ -386,45 +386,6 @@
     </footer>
 
     <script>
-        // JavaScript for dark/light mode toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.querySelector('html');
-        const sunMoonIcon = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon">
-                <path d="M12 21a9 9 0 0 1-9-9c0-1.03.17-2.03.49-2.98M12 3a9 9 0 0 1 9 9c0 1.03-.17 2.03-.49 2.98M16 16.27A10 10 0 0 0 4 12a10 10 0 0 0 12 4.27Z"/>
-                <path d="M19 3v4"/>
-                <path d="M21 5h-4"/>
-            </svg>`;
-        
-        const moonIcon = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon">
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-            </svg>`;
-
-        // Check for saved theme preference or system preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            htmlElement.classList.toggle('dark', savedTheme === 'dark');
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            htmlElement.classList.add('dark');
-        }
-
-        // Set initial icon
-        themeToggle.innerHTML = htmlElement.classList.contains('dark') ? moonIcon : sunMoonIcon;
-
-        // Add event listener to toggle theme
-        themeToggle.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                themeToggle.innerHTML = sunMoonIcon;
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                themeToggle.innerHTML = moonIcon;
-            }
-        });
-
         // --- JavaScript for Scroll-Reveal Animations ---
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
