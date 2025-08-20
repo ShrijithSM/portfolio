@@ -1,306 +1,457 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrijith S Menon - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and smooth scrolling */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        html.dark {
+            color-scheme: dark;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Customize scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3a3a3a;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* --- Custom Animations --- */
+
+        /* Fade-in keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Staggered fade-in effect for elements on load */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .fade-in:nth-child(1) { animation-delay: 0.2s; }
+        .fade-in:nth-child(2) { animation-delay: 0.4s; }
+        .fade-in:nth-child(3) { animation-delay: 0.6s; }
+
+        /* Scroll-reveal effect */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered reveal for children elements */
+        .reveal-container > * {
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .reveal-container.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+        .reveal-container.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+        .reveal-container.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+        .reveal-container.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+        .reveal-container.is-visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+        .reveal-container.is-visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+
+        /* Image-specific styles */
+        .cert-img {
+            aspect-ratio: 4 / 3;
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-logo">SSM</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<body class="bg-slate-950 text-slate-200">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-text">Shrijith S Menon</h1>
-            <p class="typewriter">AIML Student | AI Enthusiast | Idk</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/shrijithsm" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shrijithsm" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://leetcode.com/u/shrijithsm" target="_blank"><i class="fas fa-code"></i></a>
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/70 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-white hover:text-slate-400 transition-colors">
+                Shrijith S M
+            </a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="text-white hover:text-slate-400 transition-colors">About</a></li>
+                <li><a href="#skills" class="text-white hover:text-slate-400 transition-colors">Skills</a></li>
+                <li><a href="#projects" class="text-white hover:text-slate-400 transition-colors">Projects</a></li>
+                <li><a href="#achievements" class="text-white hover:text-slate-400 transition-colors">Achievements</a></li>
+                <li><a href="#contact" class="text-white hover:text-slate-400 transition-colors">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-800 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon">
+                    <path d="M12 21a9 9 0 0 1-9-9c0-1.03.17-2.03.49-2.98M12 3a9 9 0 0 1 9 9c0 1.03-.17 2.03-.49 2.98M16 16.27A10 10 0 0 0 4 12a10 10 0 0 0 12 4.27Z"/>
+                    <path d="M19 3v4"/>
+                    <path d="M21 5h-4"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section with animated elements on page load -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center px-4 py-20">
+            <div class="space-y-4">
+                <h1 class="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 fade-in">
+                    Shrijith S Menon
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto fade-in">
+                    AI/ML Engineer & Computer Science Student focused on solving real-world problems with AI.
+                </p>
+                <a href="#contact" class="inline-block mt-8 px-6 py-3 rounded-full text-white font-semibold bg-blue-600 hover:bg-blue-700 transition-transform transform hover:scale-105 fade-in">
+                    Let's Connect
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-left">
-                    <div class="profile-card">
-                        <div class="profile-image">
-                            <img src="https://avatars.githubusercontent.com/u/71313283" alt="Shrijith S Menon">
-                        </div>
-                        <div class="profile-info">
-                            <h3>Shrijith S Menon</h3>
-                            <p class="profile-title">AI/ML Engineer</p>
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <p>Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I have a strong foundation in Python and a keen interest in building AI-powered applications.</p>
-                        <p>Currently, I'm focused on solving real-world problems with AI, strengthening my DSA skills, and working on practical projects. I enjoy participating in hackathons, exploring new technologies, and constantly improving my coding skills.</p>
-                    </div>
-                    <div class="profiles-section">
-                        <h3>Find Me On</h3>
-                        <div class="profiles-grid">
-                            <a href="https://github.com/ShrijithSM" target="_blank" class="profile-item github">
-                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-logo">
-                                <span>ShrijithSM</span>
-                            </a>
-                            <a href="https://leetcode.com/ShrijithSM" target="_blank" class="profile-item leetcode">
-                                <i class="fas fa-code"></i>
-                                <span>ShrijithSM</span>
-                            </a>
-                            <a href="https://linkedin.com/in/ShrijithSM" target="_blank" class="profile-item linkedin">
-                                <i class="fab fa-linkedin"></i>
-                                <span>ShrijithSM</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tech-stack">
-                    <h3>Tech Stack</h3>
-                    <div class="tech-categories">
-                        <div class="tech-category">
-                            <h4>Languages</h4>
-                            <div class="tech-grid">
-                                <span>Python</span>
-                                <span>Java</span>
-                                <span>HTML5</span>
-                            </div>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Data Science & ML</h4>
-                            <div class="tech-grid">
-                                <span>Matplotlib</span>
-                                <span>NumPy</span>
-                                <span>Pandas</span>
-                                <span>Plotly</span>
-                                <span>scikit-learn</span>
-                                <span>Scipy</span>
-                            </div>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Frameworks & Tools</h4>
-                            <div class="tech-grid">
-                                <span>Flask</span>
-                                <span>Jenkins</span>
-                                <span>Git</span>
-                                <span>Heroku</span>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-category">
-                            <h4>Databases</h4>
-                            <div class="tech-grid">
-                                <span>MongoDB</span>
-                                <span>MySQL</span>
-                                <span>SQLite</span>
-                            </div>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Design</h4>
-                            <div class="tech-grid">
-                                <span>Figma</span>
-                                <span>Canva</span>
-                                <span>Adobe</span>
-                            </div>
-                        </div>
-                       
+        <!-- About Section with scroll-reveal -->
+        <section id="about" class="container mx-auto px-4 py-20">
+            <div class="max-w-4xl mx-auto reveal-container">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-white reveal">About Me</h2>
+                <div class="bg-slate-900 rounded-3xl p-8 shadow-lg space-y-6 border border-slate-800 reveal-container">
+                    <p class="text-lg leading-relaxed text-slate-300 reveal">
+                        Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I have a strong foundation in Python and a keen interest in building AI-powered applications.
+                    </p>
+                    <p class="text-lg leading-relaxed text-slate-300 reveal">
+                        Currently, I'm focused on solving real-world problems with AI, strengthening my DSA skills, and working on practical projects. I enjoy participating in hackathons, exploring new technologies, and constantly improving my coding skills.
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4 reveal-container">
+                        <a href="https://www.shrijithsm.tech" target="_blank" class="px-4 py-2 bg-slate-800 rounded-full text-sm font-medium text-slate-400 hover:text-white transition-colors reveal">
+                            shrijithsm.tech
+                        </a>
+                        <a href="https://linkedin.com/in/shrijithsm" target="_blank" class="px-4 py-2 bg-slate-800 rounded-full text-sm font-medium text-slate-400 hover:text-white transition-colors reveal">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/shrijithsm" target="_blank" class="px-4 py-2 bg-slate-800 rounded-full text-sm font-medium text-slate-400 hover:text-white transition-colors reveal">
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects group-section">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-grid card-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Speech Emotion Recognition</h3>
-                        <p>Recognizing emotions from speech using machine learning techniques.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/ShrijithSM/Speech-Emotion-Recognition" target="_blank">
-                                <i class="fab fa-github"></i> View Project
-                            </a>
-                        </div>
-                    </div>
+        <!-- Skills Section with scroll-reveal -->
+        <section id="skills" class="container mx-auto px-4 py-20 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white reveal">Technical Skills</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-container">
+                <!-- Programming Languages -->
+                <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Programming Languages</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>• Python (Primary)</li>
+                        <li>• Java</li>
+                        <li>• HTML5</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Election Data Visualization</h3>
-                        <p>Visualize past election results and predict outcomes using ML.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/coeusyk/election-prediction" target="_blank">
-                                <i class="fab fa-github"></i> View Project
-                            </a>
-                        </div>
-                    </div>
+                <!-- Data Science & ML -->
+                <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Data Science & ML</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>• Matplotlib</li>
+                        <li>• NumPy</li>
+                        <li>• Pandas</li>
+                        <li>• Plotly</li>
+                        <li>• scikit-learn</li>
+                        <li>• Scipy</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>House Price Prediction Model</h3>
-                        <p>This project predicts the house prices based on various features using a ML model.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/ShrijithSM/House-Price-Predictions" target="_blank">
-                                <i class="fab fa-github"></i> View Project
-                            </a>
-                        </div>
-                    </div>
+                <!-- Frameworks & Tools -->
+                <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Frameworks & Tools</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>• Flask</li>
+                        <li>• Jenkins</li>
+                        <li>• Git & GitHub</li>
+                        <li>• Heroku</li>
+                    </ul>
+                </div>
+                <!-- Databases -->
+                <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Databases</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>• MongoDB</li>
+                        <li>• MySQL</li>
+                        <li>• SQLite</li>
+                    </ul>
+                </div>
+                <!-- Design Tools -->
+                <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Design Tools</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>• Figma</li>
+                        <li>• Canva</li>
+                        <li>• Adobe</li>
+                    </ul>
+                </div>
+                <!-- Cloud Platforms -->
+                <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Cloud Platforms</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>• Google Cloud</li>
+                        <li>• Heroku</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+ <!-- Projects Section with scroll-reveal -->
+<section id="projects" class="container mx-auto px-4 py-20 reveal">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white reveal">Featured Projects</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 reveal-container">
+
+        <!-- Project 1 -->
+        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow flex flex-col h-full reveal">
+            <h3 class="text-xl font-semibold mb-2 text-white">Movie Recommendation System</h3>
+            <p class="text-slate-400 mb-4 flex-grow">
+                A content-based recommendation engine using scikit-learn (CountVectorizer + Cosine Similarity).
+                Deployed as a live web app with Streamlit.
+            </p>
+            <a href="https://zentise-movie-recommendation-system.streamlit.app/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                Live Demo &rarr;
+            </a>
+            <a href="https://github.com/Zentise/Movie-Recommendation-System" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors font-medium mt-2">
+                View on GitHub &rarr;
+            </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow flex flex-col h-full reveal">
+            <h3 class="text-xl font-semibold mb-2 text-white">Shinobu AI (Voice Chatbot)</h3>
+            <p class="text-slate-400 mb-4 flex-grow">
+                Anime persona-based voice chatbot with STT (Vosk), TTS (Piper), and LLM brain (Ollama + OpenHermes).
+                Flask UI with future features like study-help and mental support.
+            </p>
+            <a href="https://github.com/Zentise/WaifuChan" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                View on GitHub &rarr;
+            </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow flex flex-col h-full reveal">
+            <h3 class="text-xl font-semibold mb-2 text-white">Loan Approval Prediction</h3>
+            <p class="text-slate-400 mb-4 flex-grow">
+                Performed data preprocessing, EDA, and trained ML models (Logistic Regression, Decision Tree)
+                to predict loan approval outcomes.
+            </p>
+            <a href="https://github.com/ShrijithSM/Loan-Approval-Prediction" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                View on GitHub &rarr;
+            </a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow flex flex-col h-full reveal">
+            <h3 class="text-xl font-semibold mb-2 text-white">Speech Emotion Recognition</h3>
+            <p class="text-slate-400 mb-4 flex-grow">
+                Recognizing human emotions from audio using MFCC feature extraction and ML models.
+            </p>
+            <a href="https://github.com/ShrijithSM/Speech-Emotion-Recognition" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                View on GitHub &rarr;
+            </a>
+        </div>
+
+    </div>
+</section>
     
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates group-section">
-        <div class="container">
-            <h2>Professional Certificates</h2>
-            <div class="cert-grid card-grid">
-                <div class="cert-card">
-                    <h3>IBM AI Developer Professional Certificate</h3>
-                    <p>A comprehensive program by IBM that covers AI, machine learning, and deployment. It equips learners with practical skills to design, build, and deploy AI-powered solutions.</p>
-                    <a href="https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="cert-card">
-                    <h3>Python for Data Science, AI & Development</h3>
-                    <p>An introductory course by IBM that covers Python programming, data analysis, visualization, and essential libraries like Pandas, NumPy, and Matplotlib.</p>
-                    <a href="https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="cert-card">
-                    <h3>Generative AI-Powered Applications with Python</h3>
-                    <p>This certificate focuses on building AI-powered applications using Python, covering generative AI concepts, tools, and practical implementations.</p>
-                    <a href="https://coursera.org/share/3df108ee1d8808b10581315924e67384" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements group-section">
-        <div class="container">
-            <h2>Achievements</h2>
-            <div class="cert-grid card-grid">
-                <div class="cert-card">
-                    <img src="certificates/events/MIT CTF.jpg" alt="MIT CTF Certificate" class="cert-thumbnail">
-                    <h3>Indomitus Capture The Flag (MIT CTF)</h3>
-                    <p>Participated and secured a position in the Top 10 at the state-level Indomitus Capture The Flag (CTF) competition. This event, held as part of PING 2.0.2.5 from March 28-30, 2025, honed my skills in cybersecurity, problem-solving, and competitive ethical hacking within a challenging environment.</p>
-                    <a href="certificates/events/MIT CTF.jpg" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="cert-card">
-                    <img src="certificates/events/Annova.png" alt="Codewave 3.0 Certificate" class="cert-thumbnail">
-                    <h3>Codewave 3.0 Hackathon (Anova Data Simplified)</h3>
-                    <p>Achieved 4th place out of 30 teams in the Codewave 3.0 Hackathon, conducted on February 8, 2025, and hosted by The Anova Club, Computer Science and Engineering - Data Science. This recognition highlights my active participation, enthusiasm, problem-solving abilities, and teamwork in a competitive coding environment.</p>
-                    <a href="certificates/events/Annova.png" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="cert-card">
-                    <img src="certificates/events/CC CTF.png" alt="Jain CTF Certificate" class="cert-thumbnail">
-                    <h3>Capture The Flag (Jain University)</h3>
-                    <p>Participated in the "Capture the Flag" event organized by the School of CSE, Department of Cloud Technology & Information Security/Mobile Application, Jain University, on March 3, 2025. This certificate signifies my engagement in practical cybersecurity challenges and my dedication to enhancing my skills in this domain.</p>
-                    <a href="certificates/events/CC CTF.png" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="cert-card">
-                    <img src="certificates/events/Code Relay.png" alt="Code Relay Certificate" class="cert-thumbnail">
-                    <h3>Code Relay (Jain University)</h3>
-                    <p>Demonstrated exceptional engagement and involvement in the "Code Relay" event, which took place on March 12, 2025. My enthusiastic and dedicated approach, actively participating in the event, contributed to a successful and collaborative coding experience.</p>
-                    <a href="certificates/events/Code Relay.png" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="cert-card">
-                    <img src="certificates/events/HoneyWell.png" alt="JAIN Hackathon Certificate" class="cert-thumbnail">
-                    <h3>JAIN Hackathon 2024 (Honeywell Technology Solutions)</h3>
-                    <p>Proudly participated and contributed to the JAIN Hackathon 2024, a 24-hour hackathon focused on "Crafting a Fire-Safe Built Environment." This event was jointly organized by the Faculty of Engineering and Technology, Fire and Combustion Research Center, and Honeywell Technology Solutions Lab Pvt. Ltd., showcasing my involvement in impactful, real-world problem-solving.</p>
-                    <a href="certificates/events/HoneyWell.png" target="_blank" class="cert-link">
-                        View Certificate <i class="fas fa-external-link-alt"></i>
-                    </a>
+        <!-- Certificates & Achievements Sections with scroll-reveal -->
+        <section id="achievements" class="container mx-auto px-4 py-20 reveal">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white reveal">Certificates & Achievements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal-container">
+                    <!-- Professional Certificates -->
+                    <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Professional Certificates</h3>
+                        <div class="grid grid-cols-1 gap-6">
+                            <!-- IBM AI Developer -->
+                            <div class="text-center">
+                                <a href="https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3" target="_blank">
+                                    <img src="certificates\IBMAI.png" alt="IBM AI Developer Professional Certificate" class="rounded-lg shadow-md mb-2 w-full cert-img hover:scale-105 transition-transform" />
+                                </a>
+                                <h4 class="text-lg font-medium text-white mt-4">IBM AI Developer Professional Certificate</h4>
+                                <p class="text-sm text-slate-400">Provider: IBM via Coursera</p>
+                            </div>
+                            <!-- Python for Data Science -->
+                            <div class="text-center">
+                                <a href="https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3" target="_blank">
+                                    <img src="certificates\IBMpy.png" alt="Python for Data Science, AI & Development" class="rounded-lg shadow-md mb-2 w-full cert-img hover:scale-105 transition-transform" />
+                                </a>
+                                <h4 class="text-lg font-medium text-white mt-4">Python for Data Science, AI & Development</h4>
+                                <p class="text-sm text-slate-400">Provider: IBM via Coursera</p>
+                            </div>
+                            <!-- Generative AI -->
+                            <div class="text-center">
+                                <a href="https://coursera.org/share/3df108ee1d8808b10581315924e67384" target="_blank">
+                                    <img src="certificates/GenAI.png" alt="Generative AI-Powered Applications with Python" class="rounded-lg shadow-md mb-2 w-full cert-img hover:scale-105 transition-transform" />
+                                </a>
+                                <h4 class="text-lg font-medium text-white mt-4">Generative AI-Powered Applications with Python</h4>
+                                <p class="text-sm text-slate-400">Provider: Coursera</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Competitions & Events -->
+                    <div class="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-800 hover:shadow-2xl transition-shadow reveal">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Competitions & Events</h3>
+                        <div class="grid grid-cols-1 gap-6">
+                            <!-- Indomitus CTF -->
+                            <div class="text-center">
+                                <a href="#">
+                                    <img src="certificates/events/MIT CTF.jpg" alt="Indomitus Capture The Flag" class="rounded-lg shadow-md mb-2 w-full cert-img hover:scale-105 transition-transform" />
+                                </a>
+                                <h4 class="text-lg font-medium text-white mt-4">Indomitus Capture The Flag (PING 2.0.2.5)</h4>
+                                <p class="text-sm text-slate-400">Achievement: Top 10 at state-level CTF competition</p>
+                            </div>
+                            <!-- Codewave 3.0 Hackathon -->
+                            <div class="text-center">
+                                <a href="#">
+                                    <img src="certificates/events/Annova.png" alt="Codewave 3.0 Hackathon" class="rounded-lg shadow-md mb-2 w-full cert-img hover:scale-105 transition-transform" />
+                                </a>
+                                <h4 class="text-lg font-medium text-white mt-4">Codewave 3.0 Hackathon (Anova Data Simplified)</h4>
+                                <p class="text-sm text-slate-400">Achievement: 4th place out of 30 teams</p>
+                            </div>
+                            <!-- JAIN Hackathon -->
+                            <div class="text-center">
+                                <a href="#">
+                                    <img src="certificates/events/HoneyWell.png" alt="JAIN Hackathon 2024" class="rounded-lg shadow-md mb-2 w-full cert-img hover:scale-105 transition-transform" />
+                                </a>
+                                <h4 class="text-lg font-medium text-white mt-4">JAIN Hackathon 2024</h4>
+                                <p class="text-sm text-slate-400">Theme: "Crafting a Fire-Safe Built Environment"</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p class="contact-intro">Let's connect and collaborate!</p>
-            <div class="contact-grid card-grid">
-
-                <div class="contact-item">
-                    <a href="mailto:shrijithsmenon@gmail.com">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" class="contact-logo">
-                        <span>shrijithsmenon@gmail.com</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="tel:+918891874928">
-                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="contact-logo">
-                        <span>+91 8891874928</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://www.x.com/shrijithsm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="contact-logo">
-                    <span>ShrijithSM</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://www.linkedin.com/in/shrijithsm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="contact-logo">
-                    <span>ShrijithSM</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://www.github.com/ShrijithSM">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-logo">
-                    <span>ShrijithSM</span>
-                    </a>
-                </div>
-                
-
+        <!-- Contact Section -->
+        <section id="contact" class="container mx-auto px-4 py-20 text-center reveal-container">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white reveal">Get in Touch</h2>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-12 reveal">
+                I'm always open to new opportunities and collaborations. Feel free to connect with me!
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 reveal-container">
+                <a href="mailto:shrijithsmenon@gmail.com" class="bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
+                    Email Me
+                </a>
+                <a href="https://linkedin.com/in/shrijithsm" target="_blank" class="bg-slate-800 hover:bg-slate-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/shrijithsm" target="_blank" class="bg-slate-800 hover:bg-slate-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
+                    GitHub
+                </a>
+                <a href="https://x.com/shrijithsm" target="_blank" class="bg-slate-800 hover:bg-slate-700 transition-colors text-white font-semibold py-3 px-6 rounded-full transform hover:scale-105 reveal">
+                    Twitter/X
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-slate-950/70 py-8 text-center text-slate-500 reveal">
         <p>&copy; 2025 Shrijith S Menon. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // JavaScript for dark/light mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.querySelector('html');
+        const sunMoonIcon = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon">
+                <path d="M12 21a9 9 0 0 1-9-9c0-1.03.17-2.03.49-2.98M12 3a9 9 0 0 1 9 9c0 1.03-.17 2.03-.49 2.98M16 16.27A10 10 0 0 0 4 12a10 10 0 0 0 12 4.27Z"/>
+                <path d="M19 3v4"/>
+                <path d="M21 5h-4"/>
+            </svg>`;
+        
+        const moonIcon = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>`;
+
+        // Check for saved theme preference or system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.classList.toggle('dark', savedTheme === 'dark');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlElement.classList.add('dark');
+        }
+
+        // Set initial icon
+        themeToggle.innerHTML = htmlElement.classList.contains('dark') ? moonIcon : sunMoonIcon;
+
+        // Add event listener to toggle theme
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = sunMoonIcon;
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = moonIcon;
+            }
+        });
+
+        // --- JavaScript for Scroll-Reveal Animations ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            // Observe single elements
+            document.querySelectorAll('.reveal:not(.reveal-container)').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Observe reveal containers
+            document.querySelectorAll('.reveal-container').forEach(container => {
+                observer.observe(container);
+            });
+        });
+    </script>
 </body>
 </html>
