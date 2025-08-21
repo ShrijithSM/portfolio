@@ -154,6 +154,7 @@ CURRENT FOCUS AREAS:
 • Exploring new technologies in AI/ML space
 • Continuous learning and skill improvement
 
+
 FUTURE GOALS:
 ═══════════════
 • Add portfolio screenshots in README
