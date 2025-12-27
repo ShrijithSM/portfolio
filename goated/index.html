@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrijith S Menon- Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#000000',
+                        white: '#ffffff',
+                        'off-white': '#f0f0f0',
+                        'gray-dark': '#111111',
+                        'gray-mid': '#333333',
+                        'gray-light': '#888888',
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    cursor: {
+                        'none': 'none',
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --cursor-size: 20px;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            cursor: none;
+            /* Hide default cursor */
+            overflow-x: hidden;
+        }
+
+        /* Custom Cursor */
+        #cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--cursor-size);
+            height: var(--cursor-size);
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+            mix-blend-mode: difference;
+        }
+
+        #cursor.hovered {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: transparent;
+        }
+
+        /* Typography Utilities */
+        .text-outline {
+            -webkit-text-stroke: 1px #fff;
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .text-outline:hover {
+            color: #fff;
+        }
+
+        /* Animations */
+        .reveal-text {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .reveal-text span {
+            display: inline-block;
+            transform: translateY(100%);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-text.visible span {
+            transform: translateY(0);
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Grid Background (Subtle) */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #111 1px, transparent 1px),
+                linear-gradient(to bottom, #111 1px, transparent 1px);
+            opacity: 0.5;
+        }
+
+        /* Brutalist Borders */
+        .brutal-border {
+            border: 1px solid #333;
+        }
+
+        .brutal-border-t {
+            border-top: 1px solid #333;
+        }
+
+        .brutal-border-b {
+            border-bottom: 1px solid #333;
+        }
+
+        /* Links Hover */
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-white selection:text-black">
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center mix-blend-difference">
+        <a href="#" class="text-xl font-bold tracking-tighter hover-trigger" data-cursor="hover">S. MENON</a>
+        <div class="hidden md:flex space-x-8 font-mono text-sm">
+            <a href="#work" class="hover-underline-animation hover-trigger" data-cursor="hover">WORK</a>
+            <a href="#about" class="hover-underline-animation hover-trigger" data-cursor="hover">ABOUT</a>
+            <a href="#contact" class="hover-underline-animation hover-trigger" data-cursor="hover">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 relative bg-grid">
+            <div class="max-w-7xl mx-auto w-full">
+                <p class="font-mono text-gray-light mb-4 fade-in-up">/// @ShrijthSM</p>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-tight mb-8">
+                    <div class="reveal-text"><span>ENGINEER.</span></div><br>
+                    <div class="reveal-text"><span>INTELLIGENT.</span></div><br>
+                    <div class="reveal-text"><span>SYSTEMS.</span></div>
+                </h1>
+
+                <div class="flex flex-col md:flex-row justify-between items-end mt-12 fade-in-up">
+                    <div class="max-w-xl">
+                        <p class="text-xl md:text-2xl text-gray-400 leading-relaxed font-light">
+                            Constructing high-performance AI architectures and scalable software solutions.
+                            Based in the digital void.
+                        </p>
+                    </div>
+
+                    <a href="#work"
+                        class="mt-8 md:mt-0 inline-flex items-center space-x-2 border border-white px-8 py-4 hover:bg-white hover:text-black transition-colors duration-300 font-mono text-sm uppercase hover-trigger"
+                        data-cursor="hover">
+                        <span>Explore Work</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="transform rotate-45">
+                            <path d="M1 1H11V11" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M1 11L11 1" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-6 font-mono text-xs text-gray-600 fade-in-up">
+                SCROLL TO DECRYPT
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="w-full h-px bg-gray-900"></div>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 px-6 md:px-12 bg-black">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-4 fade-in-up">
+                        <span class="font-mono text-sm text-gray-light block mb-4">(001) IDENTITY</span>
+                        <h2 class="text-4xl font-bold tracking-tight">THE ARCHITECT</h2>
+                    </div>
+                    <div class="lg:col-span-8 space-y-8 fade-in-up">
+                        <p class="text-3xl md:text-4xl leading-tight font-light text-gray-200">
+                            I am Shrijith S Menon. A Computer Science Engineer obsessed with the intersection of
+                            <span class="text-white font-medium">Artificial Intelligence</span> and
+                            <span class="text-white font-medium">Human Interaction</span>.
+                        </p>
+                        <p class="text-lg text-gray-400 max-w-2xl font-mono">
+                            Currently solving real-world problems through code. My stack is my weapon, and data is my
+                            ammunition. I build systems that don't just function—they perform.
+                        </p>
+
+                        <div class="pt-8">
+                            <h3 class="font-mono text-sm text-gray-light mb-6 uppercase tracking-wider">Tech Stack
+                            </h3>
+                            <div class="flex flex-wrap gap-x-12 gap-y-4 font-mono text-sm text-gray-300">
+                                <span class="hover:text-white transition-colors">Python</span>
+                                <span class="hover:text-white transition-colors">PyTorch / TensorFlow</span>
+                                <span class="hover:text-white transition-colors">React / Next.js</span>
+                                <span class="hover:text-white transition-colors">Cloud Architecture</span>
+                                <span class="hover:text-white transition-colors">LLM Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="py-0 border-t border-gray-900">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+                <div class="mb-20 fade-in-up">
+                    <span class="font-mono text-sm text-gray-light block mb-4">(002) SELECTED WORKS</span>
+                    <h2 class="text-4xl font-bold tracking-tight">PROJECTS</h2>
+                </div>
+
+                <!-- Project List (Brutalist List Style) -->
+                <div class="flex flex-col">
+
+                    <!-- Project 1 -->
+                    <div class="group border-t border-gray-800 py-12 transition-colors hover:bg-gray-dark fade-in-up">
+                        <a href="https://github.com/Zentise/DripMate" target="_blank"
+                            class="block grid grid-cols-1 lg:grid-cols-12 gap-8 items-center cursor-none hover-trigger"
+                            data-cursor="hover">
+                            <div class="lg:col-span-2 font-mono text-gray-500 group-hover:text-white transition-colors">
+                                01 / LLM
+                            </div>
+                            <div class="lg:col-span-6">
+                                <h3
+                                    class="text-3xl md:text-5xl font-bold text-white mb-2 group-hover:translate-x-4 transition-transform duration-500">
+                                    DRIPMATE</h3>
+                            </div>
+                            <div class="lg:col-span-4 text-right lg:text-left">
+                                <p class="text-gray-400 font-mono text-sm mb-2">LLaMA 3 • Chatbot • FastAPI •</p>
+                                <span
+                                    class="inline-block text-xs uppercase tracking-widest border border-gray-700 px-3 py-1 rounded-full text-gray-500 group-hover:border-white group-hover:text-white transition-colors">LIVE
+                                    SYSTEM</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group border-t border-gray-800 py-12 transition-colors hover:bg-gray-dark fade-in-up">
+                        <a href="https://github.com/Zentise/WaifuChan" target="_blank"
+                            class="block grid grid-cols-1 lg:grid-cols-12 gap-8 items-center cursor-none hover-trigger"
+                            data-cursor="hover">
+                            <div class="lg:col-span-2 font-mono text-gray-500 group-hover:text-white transition-colors">
+                                02 / AI
+                            </div>
+                            <div class="lg:col-span-6">
+                                <h3
+                                    class="text-3xl md:text-5xl font-bold text-white mb-2 group-hover:translate-x-4 transition-transform duration-500">
+                                    SHINOBU AI VOICE</h3>
+                            </div>
+                            <div class="lg:col-span-4 text-right lg:text-left">
+                                <p class="text-gray-400 font-mono text-sm mb-2">LLM (Ollama) • STT/TTS • Flask</p>
+                                <span
+                                    class="inline-block text-xs uppercase tracking-widest border border-gray-700 px-3 py-1 rounded-full text-gray-500 group-hover:border-white group-hover:text-white transition-colors">Voice
+                                    Prototype</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group border-t border-gray-800 py-12 transition-colors hover:bg-gray-dark fade-in-up">
+                        <a href="https://zentise-movie-recommendation-system.streamlit.app/" target="_blank"
+                            class="block grid grid-cols-1 lg:grid-cols-12 gap-8 items-center cursor-none hover-trigger"
+                            data-cursor="hover">
+                            <div class="lg:col-span-2 font-mono text-gray-500 group-hover:text-white transition-colors">
+                                03 / ML
+                            </div>
+                            <div class="lg:col-span-6">
+                                <h3
+                                    class="text-3xl md:text-5xl font-bold text-white mb-2 group-hover:translate-x-4 transition-transform duration-500">
+                                    MOVIE REC. ENGINE</h3>
+                            </div>
+                            <div class="lg:col-span-4 text-right lg:text-left">
+                                <p class="text-gray-400 font-mono text-sm mb-2">Scikit-learn • Cosine Similarity •
+                                    Streamlit</p>
+                                <span
+                                    class="inline-block text-xs uppercase tracking-widest border border-gray-700 px-3 py-1 rounded-full text-gray-500 group-hover:border-white group-hover:text-white transition-colors">Live
+                                    System</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div
+                        class="group border-t border-b border-gray-800 py-12 transition-colors hover:bg-gray-dark fade-in-up">
+                        <a href="https://github.com/ShrijithSM/Speech-Emotion-Recognition" target="_blank"
+                            class="block grid grid-cols-1 lg:grid-cols-12 gap-8 items-center cursor-none hover-trigger"
+                            data-cursor="hover">
+                            <div class="lg:col-span-2 font-mono text-gray-500 group-hover:text-white transition-colors">
+                                04 / AUDIO
+                            </div>
+                            <div class="lg:col-span-6">
+                                <h3
+                                    class="text-3xl md:text-5xl font-bold text-white mb-2 group-hover:translate-x-4 transition-transform duration-500">
+                                    EMOTION RECOGNITION</h3>
+                            </div>
+                            <div class="lg:col-span-4 text-right lg:text-left">
+                                <p class="text-gray-400 font-mono text-sm mb-2">MFCC • Audio Processing • ML</p>
+                                <span
+                                    class="inline-block text-xs uppercase tracking-widest border border-gray-700 px-3 py-1 rounded-full text-gray-500 group-hover:border-white group-hover:text-white transition-colors">Research</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="py-32 px-6 md:px-12 bg-black border-b border-gray-900">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Certificates -->
+                    <div class="fade-in-up">
+                        <span class="font-mono text-sm text-gray-light block mb-6">(003) CERTIFICATIONS</span>
+                        <ul class="space-y-6">
+                            <li class="group">
+                                <a href="https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3" target="_blank"
+                                    class="block hover-trigger" data-cursor="hover">
+                                    <h4
+                                        class="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">
+                                        IBM AI Developer</h4>
+                                    <p class="font-mono text-sm text-gray-500">Professional Certificate</p>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3" target="_blank"
+                                    class="block hover-trigger" data-cursor="hover">
+                                    <h4
+                                        class="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">
+                                        Data Science & AI</h4>
+                                    <p class="font-mono text-sm text-gray-500">IBM Professional Certificate</p>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="https://coursera.org/share/3df108ee1d8808b10581315924e67384" target="_blank"
+                                    class="block hover-trigger" data-cursor="hover">
+                                    <h4
+                                        class="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">
+                                        Generative AI Apps</h4>
+                                    <p class="font-mono text-sm text-gray-500">Coursera Certification</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Events -->
+                    <div class="fade-in-up transition-delay-200">
+                        <span class="font-mono text-sm text-gray-light block mb-6">(004) FIELD OPERATIONS</span>
+                        <ul class="space-y-6">
+                            <li
+                                class="border-l-2 border-gray-800 pl-6 hover:border-white transition-colors duration-300">
+                                <h4 class="text-lg font-bold text-white">Indomitus CTF</h4>
+                                <p class="font-mono text-sm text-gray-500">Top 10 State-Level</p>
+                            </li>
+                            <li
+                                class="border-l-2 border-gray-800 pl-6 hover:border-white transition-colors duration-300">
+                                <h4 class="text-lg font-bold text-white">Codewave 3.0 Hackathon</h4>
+                                <p class="font-mono text-sm text-gray-500">4th Place (Anova Data)</p>
+                            </li>
+                            <li
+                                class="border-l-2 border-gray-800 pl-6 hover:border-white transition-colors duration-300">
+                                <h4 class="text-lg font-bold text-white">JAIN Hackathon 2024</h4>
+                                <p class="font-mono text-sm text-gray-500">Fire-Safe Environment</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Footer -->
+        <section id="contact"
+            class="h-screen flex flex-col justify-between px-6 md:px-12 py-12 bg-black relative overflow-hidden">
+            <!-- Background Text -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-10 select-none">
+                <span class="text-[20vw] font-bold text-outline leading-none">BUILD</span>
+            </div>
+
+            <div class="relative z-10 w-full flex justify-between items-start fade-in-up">
+                <div>
+                    <span class="font-mono text-sm text-gray-light block mb-2">(005) COMMUNICATE</span>
+                    <h2 class="text-5xl md:text-7xl font-bold max-w-4xl tracking-tighter">
+                        READY TO DEPLOY? <br>
+                        LET'S TALK.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 fade-in-up">
+                <a href="mailto:shrijithsmenon@gmail.com"
+                    class="group border border-gray-800 p-8 hover:bg-white hover:text-black transition-all duration-300 hover-trigger"
+                    data-cursor="hover">
+                    <span class="font-mono text-xs block mb-4 group-hover:text-black text-gray-500">EMAIL</span>
+                    <span class="text-xl font-bold">shrijithsmenon@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/shrijithsm" target="_blank"
+                    class="group border border-gray-800 p-8 hover:bg-white hover:text-black transition-all duration-300 hover-trigger"
+                    data-cursor="hover">
+                    <span class="font-mono text-xs block mb-4 group-hover:text-black text-gray-500">LINKEDIN</span>
+                    <span class="text-xl font-bold">/in/shrijithsm</span>
+                </a>
+                <a href="https://github.com/shrijithsm" target="_blank"
+                    class="group border border-gray-800 p-8 hover:bg-white hover:text-black transition-all duration-300 hover-trigger"
+                    data-cursor="hover">
+                    <span class="font-mono text-xs block mb-4 group-hover:text-black text-gray-500">GITHUB</span>
+                    <span class="text-xl font-bold">@shrijithsm</span>
+                </a>
+                <a href="https://x.com/shrijithsm" target="_blank"
+                    class="group border border-gray-800 p-8 hover:bg-white hover:text-black transition-all duration-300 hover-trigger"
+                    data-cursor="hover">
+                    <span class="font-mono text-xs block mb-4 group-hover:text-black text-gray-500">SOCIAL</span>
+                    <span class="text-xl font-bold">@shrijithsm</span>
+                </a>
+            </div>
+
+            <footer class="relative z-10 flex justify-between items-end border-t border-gray-900 pt-8 mt-auto">
+                <p class="font-mono text-xs text-gray-600">
+                    SYSTEM STATUS: ONLINE <br>
+                    LOC: 127.0.0.1
+                </p>
+                <p class="font-mono text-xs text-gray-600">
+                    &copy; 2025 SHRIJITH Sō MENON
+                </p>
+            </footer>
+        </section>
+
+    </main>
+
+    <script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const hoverTriggers = document.querySelectorAll('.hover-trigger');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        hoverTriggers.forEach(trigger => {
+            trigger.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            trigger.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
+        });
+
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: Stop observing once revealed
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        // Targeted elements
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Text reveal animations (staggered)
+        const textReveals = document.querySelectorAll('.reveal-text');
+        textReveals.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, 100 + (index * 150)); // Stagger delay
+        });
+    </script>
+</body>
+
+</html>

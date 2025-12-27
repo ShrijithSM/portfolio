@@ -8,25 +8,25 @@ Name: Shrijith S Menon
 Profession: AI/ML Engineer & Computer Science Student
 Specialization: Artificial Intelligence and Machine Learning
 Status: Computer Science and Engineering Student
-Website: https://www.shrijithsm.tech
+Website: <https://www.shrijithsm.tech>
 
 CONTACT INFORMATION:
 ═══════════════════════
-📧 Email: shrijithsmenon@gmail.com
+📧 Email: <shrijithsmenon@gmail.com>
 📱 Phone: +91 8891874928
-🌐 LinkedIn: https://linkedin.com/in/shrijithsm
-🐙 GitHub: https://github.com/shrijithsm
-🔗 LeetCode: https://leetcode.com/u/shrijithsm
-🐦 Twitter/X: https://x.com/shrijithsm
+🌐 LinkedIn: <https://linkedin.com/in/shrijithsm>
+🐙 GitHub: <https://github.com/shrijithsm>
+🔗 LeetCode: <https://leetcode.com/u/shrijithsm>
+🐦 Twitter/X: <https://x.com/shrijithsm>
 
 PROFESSIONAL SUMMARY:
 ════════════════════════
-Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student 
-specializing in Artificial Intelligence and Machine Learning. I have a strong 
+Hey there! I'm Shrijith S Menon, a Computer Science and Engineering student
+specializing in Artificial Intelligence and Machine Learning. I have a strong
 foundation in Python and a keen interest in building AI-powered applications.
 
-Currently, I'm focused on solving real-world problems with AI, strengthening my 
-DSA skills, and working on practical projects. I enjoy participating in 
+Currently, I'm focused on solving real-world problems with AI, strengthening my
+DSA skills, and working on practical projects. I enjoy participating in
 hackathons, exploring new technologies, and constantly improving my coding skills.
 
 TECHNICAL SKILLS:
@@ -66,40 +66,35 @@ Cloud Platforms:
 
 FEATURED PROJECTS:
 ═════════════════════
-1. Speech Emotion Recognition
-   Description: Recognizing emotions from speech using machine learning techniques.
-   Repository: https://github.com/ShrijithSM/Speech-Emotion-Recognition
-
-2. Election Data Visualization
-   Description: Visualize past election results and predict outcomes using ML.
-   Repository: https://github.com/coeusyk/election-prediction
-
-3. House Price Prediction Model
-   Description: This project predicts house prices based on various features using a ML model.
-   Repository: https://github.com/ShrijithSM/House-Price-Predictions
+● DripMate – AI-Powered Personal Stylist (Live Product)
+Built and deployed a full-stack AI web app that provides personalized outfit recommendations using LLM-based
+reasoning. Designed REST APIs, implemented prompt logic, and hosted the application publicly. link:<https://github.com/Zentise/DripMate>
+● WaifuChanAI (Anime Voice Chatbot) — Designed a voice-enabled AI chatbot with persona-driven responses.
+Integrated Vosk (STT), Piper (TTS), and Ollama (LLM). Flask-based UI with productivity tools. Ongoing flagship
+project. link:<https://github.com/Zentise/WaifuChan>
+● Movie Recommendation System — Built a content-based movie recommendation engine using Scikit-learn
+(CountVectorizer + Cosine Similarity). Developed a Streamlit web app and deployed live. link:<https://github.com/Zentise/Movie-Recommendation-System/>
+● Loan Approval Prediction — Performed EDA and preprocessing on loan dataset. Trained Logistic
+Regression/Decision Tree model to predict loan approval status. Focused on ML workflow understanding. link: <https://github.com/ShrijithSM/Loan-Approval-Prediction>
 
 PROFESSIONAL CERTIFICATES:
 ═══════════════════════════
-1. IBM AI Developer Professional Certificate
+
+1. IBM AI Developer Professional Certificate Jan 2025
    Provider: IBM via Coursera
-   Description: A comprehensive program covering AI, machine learning, and deployment. 
+   Description: A comprehensive program covering AI, machine learning, and deployment.
    Equips learners with practical skills to design, build, and deploy AI-powered solutions.
-   Certificate Link: https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3
+   Certificate Link: <https://coursera.org/share/3dc57c9186755c2d6045ab2ab37ff2f3>
 
-2. Python for Data Science, AI & Development
-   Provider: IBM via Coursera
-   Description: Introductory course covering Python programming, data analysis, 
-   visualization, and essential libraries like Pandas, NumPy, and Matplotlib.
-   Certificate Link: https://coursera.org/share/ec5af17ad66d6860c0fd8b76883b86f3
-
-3. Generative AI-Powered Applications with Python
-   Provider: Coursera
-   Description: Focuses on building AI-powered applications using Python, covering 
-   generative AI concepts, tools, and practical implementations.
-   Certificate Link: https://coursera.org/share/3df108ee1d8808b10581315924e67384
+2. Oracle Cloud Infrastructure 2025 Certified Generative AI Professional Oracle University (Oct 2025)
+   • Validated knowledge of Generative AI concepts, LLM fundamentals, prompt engineering, and deployment
+   considerations on cloud infrastructure.
+   • Covered responsible AI usage, model lifecycle, and real-world GenAI applications
+   Certificate link: <https://drive.google.com/file/d/1p8NS5xRnzmMCw-lbIvhgObaT6UNoXrk5/view?usp=drive_link>
 
 ACHIEVEMENTS & COMPETITIONS:
 ══════════════════════════════
+
 1. Indomitus Capture The Flag (MIT CTF)
    Event: PING 2.0.2.5
    Date: March 28-30, 2025
@@ -124,7 +119,7 @@ ACHIEVEMENTS & COMPETITIONS:
 5. JAIN Hackathon 2024 (Honeywell Technology Solutions)
    Type: 24-hour hackathon
    Theme: "Crafting a Fire-Safe Built Environment"
-   Organizers: Faculty of Engineering and Technology, Fire and Combustion Research Center, 
+   Organizers: Faculty of Engineering and Technology, Fire and Combustion Research Center,
    and Honeywell Technology Solutions Lab Pvt. Ltd.
    Skills: Real-world problem-solving, innovation
 
@@ -153,22 +148,3 @@ CURRENT FOCUS AREAS:
 • Participating in hackathons and competitive programming
 • Exploring new technologies in AI/ML space
 • Continuous learning and skill improvement
-
-
-FUTURE GOALS:
-═══════════════
-• Add portfolio screenshots in README
-• Implement project filtering
-• Add blog section
-• Enhance accessibility features
-• Add advanced animation effects
-• Expand AI/ML project portfolio
-
-COPYRIGHT:
-═══════════
-© 2025 Shrijith S Menon. All rights reserved.
-
-================================================================================
-Generated on: August 9, 2025
-Portfolio Website: https://www.shrijithsm.tech
-================================================================================
