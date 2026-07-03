@@ -349,7 +349,7 @@ nav {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-sm);
 }
 
@@ -412,7 +412,7 @@ nav {
 /* Achievements */
 .achievement-list li {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 150px 1fr;
     gap: var(--spacing-sm);
     padding: 2rem 0;
     border-bottom: 1px solid #1a1a1a;

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrijith S Menon | AI Engineer</title>
+    <meta name="description"
+        content="Portfolio of Shrijith S Menon, AI/ML Engineer and Computer Science Student specialized in Artificial Intelligence and Machine Learning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <nav>
+        <div class="logo">ShrijithSM</div>
+        <div class="menu-btn">MENU</div>
+        <div class="nav-links">
+            <a href="#about" class="nav-item">ABOUT</a>
+            <a href="#experience" class="nav-item">EXPERIENCE</a>
+            <a href="#work" class="nav-item">WORK</a>
+            <a href="#skills" class="nav-item">SKILLS</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="reveal-text">AI & MACHINE</span><br>
+                    <span class="reveal-text">LEARNING</span><br>
+                    <span class="reveal-text">ENGINEER</span>
+                </h1>
+                <p class="hero-subtitle reveal-delay">Shrijith S Menon | Computer Science Student</p>
+                <div class="hero-cta reveal-delay" style="margin-top: 2rem;">
+                    <a href="#contact" style="border-bottom: 1px solid white; padding-bottom: 5px;">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">PROFILE</h2>
+                </div>
+                <div class="about-content">
+                    <p class="big-text">
+                        Computer Science student specializing in <span class="highlight">Artificial Intelligence</span>
+                        and <span class="highlight">Machine Learning</span>, driven to solve real-world problems.
+                    </p>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p>I am a 3rd year Computer Science and Engineering student with a robust foundation in
+                                Python and a deep passion for building AI-powered applications. My focus lies in
+                                bridging the gap between theoretical ML concepts and practical, scalable solutions.</p>
+                            <p>Currently, I am actively working on strengthening my Data Structures & Algorithms (DSA)
+                                skills while developing full-stack AI applications. I thrive in competitive environments
+                                like hackathons and am constantly exploring the latest advancements in LLMs and
+                                Generative AI.</p>
+                            <p>Open for Internships and Full-time opportunities.</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">3+</span>
+                                <span class="stat-label">Years Coding</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">5+</span>
+                                <span class="stat-label">Major Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">EXPERIENCE</h2>
+                </div>
+                <ul class="achievement-list">
+                    <li>
+                        <span class="ach-date">Mar 2026 - Present</span>
+                        <div class="ach-content">
+                            <span class="ach-title">Backend Developer Intern | NexGen FC, Bengaluru</span>
+                            <span class="ach-desc">
+                                • Built a Django REST Framework dashboard that brings together real-time land, legal, and task data in one place — now used daily by 15+ team members across departments.<br><br>
+                                • Set up role-based access control (RBAC) to make sure only the right people can hit sensitive endpoints.<br><br>
+                                • Wired up WhatsApp (Meta Cloud API) and SMS (Twilio) notifications using an adapter/factory pattern to keep the provider logic clean and swappable.
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section work" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">SELECTED WORK</h2>
+                </div>
+                <div class="project-list">
+                    <!-- Project 1 -->
+                    <a href="https://github.com/Zentise/stocksage" target="_blank" class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-name">StockSage</h3>
+                            <span class="project-cat">AI Trading Terminal • CrewAI • React</span>
+                        </div>
+                        <div class="project-desc">
+                            Built a 5-agent CrewAI pipeline powered by LLaMA 4 Scout via Groq API for autonomous NSE & NYSE market scanning. Delivered real-time BUY/SELL/AVOID signals with entry, stop-loss, and ATR targets via SSE-streamed React frontend with TradingView-style candlestick charts.
+                        </div>
+                        <div class="project-arrow">→</div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a href="https://github.com/Zentise/dripmate" target="_blank" class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-name">DripMate</h3>
+                            <span class="project-cat">AI Personal Stylist • LLM • FastAPI</span>
+                        </div>
+                        <div class="project-desc">
+                            Developed a full-stack AI outfit recommendation app using LLM-based reasoning and prompt engineering. Designed and deployed REST APIs with FastAPI; hosted frontend on Vercel and backend on Render.
+                        </div>
+                        <div class="project-arrow">→</div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="https://github.com/Zentise/EVidey" target="_blank"
+                        class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-name">KeikoChat</h3>
+                            <span class="project-cat">Voice AI Companion • STT/TTS</span>
+                        </div>
+                        <div class="project-desc">
+                            Engineered a voice-first AI companion with FastAPI backend, emotional state handling, and multi-model LLM fallback for zero-downtime responses. Implemented browser-native STT/TTS (zero API cost); deployed production frontend on Vercel + Render.
+                        </div>
+                        <div class="project-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <!-- Education Section -->
+        <section class="section education" id="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">EDUCATION</h2>
+                </div>
+                <ul class="achievement-list">
+                    <li>
+                        <span class="ach-date">2023 - 2027</span>
+                        <div class="ach-content">
+                            <span class="ach-title">Jain (Deemed-to-be-university), Bengaluru</span>
+                            <span class="ach-desc">B.Tech Computer Science & Engineering - Artificial Intelligence & Machine Learning | CGPA: 8.1</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ach-date">2011 - 2023</span>
+                        <div class="ach-content">
+                            <span class="ach-title">Kendriya Vidyalaya Port Trust, Kochi</span>
+                            <span class="ach-desc">CBSE (12th standard) PCM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="section achievements" id="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">ACHIEVEMENTS</h2>
+                </div>
+                <ul class="achievement-list">
+                    <li>
+                        <span class="ach-date">Ongoing</span>
+                        <div class="ach-content">
+                            <span class="ach-title">Problem Solving</span>
+                            <span class="ach-desc">Solved 150+ LeetCode problems across Arrays, Strings, Trees, Graphs, and Dynamic Programming.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ach-date">Hackathon</span>
+                        <div class="ach-content">
+                            <span class="ach-title">4th Place - Jain University Hackathon</span>
+                            <span class="ach-desc">Built a 2029 India Election Prediction Model with live Dashboard in 3 hours.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ach-date">CTF</span>
+                        <div class="ach-content">
+                            <span class="ach-title">8th Place - MIT Manipal CTF</span>
+                            <span class="ach-desc">Secured 8th place in a 48-hour Capture The Flag (CTF) competition at MIT Manipal.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ach-date">Leadership</span>
+                        <div class="ach-content">
+                            <span class="ach-title">Event Management & Social Media Lead</span>
+                            <span class="ach-desc">Event Management Lead (3rd Year) & Social Media Lead (2nd Year) at The Cognito Club — 250+ member university tech club.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section certifications" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2 class="section-title">CERTIFICATIONS</h2>
+                </div>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <span class="cert-year">Jan 2025</span>
+                        <div class="cert-details">
+                            <h3>IBM AI Developer Professional</h3>
+                            <p class="cert-provider">Issued by IBM</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-year">Oct 2025</span>
+                        <div class="cert-details">
+                            <h3>OCI Generative AI Professional</h3>
+                            <p class="cert-provider">Issued by Oracle University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">07</span>
+                    <h2 class="section-title">TECHNICAL</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-cat">
+                        <h3>PROGRAMMING</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript (basic)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-cat">
+                        <h3>AI/ML & NLP</h3>
+                        <ul>
+                            <li>Scikit-learn, TensorFlow</li>
+                            <li>HuggingFace, LLM Fine-tuning</li>
+                            <li>Ollama, Groq API</li>
+                            <li>Vosk (STT), Piper (TTS)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-cat">
+                        <h3>AGENTIC AI & LLMS</h3>
+                        <ul>
+                            <li>CrewAI</li>
+                            <li>LangChain</li>
+                            <li>Prompt Engineering</li>
+                            <li>RAG</li>
+                        </ul>
+                    </div>
+                    <div class="skill-cat">
+                        <h3>DATA & VISUALIZATION</h3>
+                        <ul>
+                            <li>Pandas, NumPy</li>
+                            <li>Matplotlib, Seaborn</li>
+                            <li>Plotly</li>
+                        </ul>
+                    </div>
+                    <div class="skill-cat">
+                        <h3>FRAMEWORKS & TOOLS</h3>
+                        <ul>
+                            <li>FastAPI, Django REST, Flask</li>
+                            <li>React (Vite + Tailwind)</li>
+                            <li>Streamlit, WebSockets</li>
+                            <li>Docker, Git/GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="skill-cat">
+                        <h3>DATABASES</h3>
+                        <ul>
+                            <li>SQLite, MySQL</li>
+                            <li>ChromaDB</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <p class="contact-pre">I'm always open to new opportunities and collaborations. Feel free to connect
+                        with me! </p>
+                    <a href="mailto:shrijithsmenon@gmail.com" class="contact-email">
+                        Let's Talk
+                    </a>
+                    <div class="footer-links">
+                        <a href="https://github.com/shrijithsm" target="_blank">GITHUB</a>
+                        <a href="https://linkedin.com/in/shrijithsm" target="_blank">LINKEDIN</a>
+                        <a href="tel:+918891874928">PHONE</a>
+                        <a href="https://x.com/shrijithsm" target="_blank">TWITTER</a>
+                        <a href="https://leetcode.com/u/shrijithsm" target="_blank">LEETCODE</a>
+                    </div>
+                    <p class="copyright">© 2026 Shrijith S Menon</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
